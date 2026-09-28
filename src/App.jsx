@@ -1,19 +1,11 @@
-import { useState } from "react"
 import './App.css'
+import Header from './components/Header'
 
 function App() {
-  const [temaOscuro, setTemaOscuro] = useState(false);
-
-  function alternarTema() {
-    return setTemaOscuro(!temaOscuro);
-  }
-
   return (
-    <div className={`contenedor ${temaOscuro ? 'temaOscuro' : 'temaClaro'}`}>
-      <h1> {temaOscuro ? "Tema oscuro" : "Tema claro"} </h1>
-      <button className="button" onClick={alternarTema}>Cambiar tema</button>
+    <div>
+      <Header></Header>
     </div>
-
   )
 }
 
